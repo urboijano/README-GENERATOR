@@ -10,7 +10,6 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)]()
 
-*Repository statistics will be available once the project is published to GitHub*
 
 </div>
 
