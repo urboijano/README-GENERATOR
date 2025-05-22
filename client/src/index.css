@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.5rem;
+
+  /* GitHub-specific colors */
+  --github-dark: 216 9% 16.9%;
+  --github-blue: 212 92% 45%;
+  --github-white: 0 0% 100%;
+  --github-text: 216 8% 12.5%;
+  --github-border: 216 8% 84.1%;
+  --github-bg: 210 12% 96.9%;
+  --github-success: 142.1 76.2% 36.3%;
+  --github-danger: 355.7 100% 48.4%;
+  --github-warning: 38 88.7% 38%;
+  
+  /* Chart colors */
+  --chart-1: 216 85% 34%;
+  --chart-2: 142 76% 36%;
+  --chart-3: 355 100% 48%;
+  --chart-4: 38 89% 38%;
+  --chart-5: 262 83% 58%;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215.4 16.3% 56.9%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 215 20.2% 65.1%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 1.2%;
+  --secondary: 222.2 47.4% 11.2%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 216 34% 17%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 216 34% 17%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .github-markdown {
+    @apply text-[16px] leading-normal;
+  }
+  
+  .github-markdown h1 {
+    @apply text-[32px] leading-[40px] font-semibold mt-6 mb-4 pb-3 border-b border-[#D0D7DE];
+  }
+  
+  .github-markdown h2 {
+    @apply text-[24px] leading-[30px] font-semibold mt-6 mb-4 pb-3 border-b border-[#D0D7DE];
+  }
+  
+  .github-markdown h3 {
+    @apply text-[20px] leading-[25px] font-semibold mt-6 mb-4;
+  }
+  
+  .github-markdown h4 {
+    @apply text-[16px] leading-[20px] font-semibold mt-6 mb-4;
+  }
+  
+  .github-markdown p {
+    @apply my-4;
+  }
+  
+  .github-markdown ul, .github-markdown ol {
+    @apply my-4 pl-8;
+  }
+  
+  .github-markdown ul {
+    @apply list-disc;
+  }
+  
+  .github-markdown ol {
+    @apply list-decimal;
+  }
+  
+  .github-markdown li {
+    @apply mb-1;
+  }
+  
+  .github-markdown pre {
+    @apply bg-[#F6F8FA] p-4 rounded-lg overflow-x-auto my-4;
+  }
+  
+  .github-markdown code {
+    @apply bg-[#F6F8FA] px-1 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .github-markdown pre > code {
+    @apply bg-transparent p-0;
+  }
+  
+  .github-markdown a {
+    @apply text-[#0969DA] hover:underline;
+  }
+  
+  .github-markdown blockquote {
+    @apply pl-4 border-l-4 border-[#D0D7DE] text-gray-600 my-4;
+  }
+  
+  .github-markdown table {
+    @apply border-collapse w-full my-4;
+  }
+  
+  .github-markdown th, .github-markdown td {
+    @apply border border-[#D0D7DE] px-4 py-2;
+  }
+  
+  .github-markdown th {
+    @apply bg-[#F6F8FA];
+  }
+
+  /* Repo URL Input */
+  .repo-input {
+    @apply w-full px-3 py-2 border border-[#D0D7DE] rounded-md focus:outline-none focus:ring-2 focus:ring-[#0969DA];
+  }
+}
